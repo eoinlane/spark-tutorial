@@ -16,8 +16,7 @@ object WordCount {
     text.flatMap { line => line.split(" ") }
     .map { word => (word,1) }
     .reduceByKey(_ + _)
-    .saveAsTextFile("food.count.txt")
-    
+    .saveAsTextFile("food.count.txt")    
   }
   
 }
